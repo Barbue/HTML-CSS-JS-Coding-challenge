@@ -1,25 +1,36 @@
-let nameInput = document.querySelector("#nameInput");
-let submitButton = document.querySelector("#submitButton");
+let add1Button = document.querySelector("#add1");
+let remove1Button = document.querySelector("#remove1");
 let table = document.querySelector('table')
+let counter = document.querySelector('#paragraph')
+let tableRow = document.querySelector('tr')
+let dataCell = document.querySelector('td')
+
 
 let ctr = 0;
-submitButton.addEventListener('click', () => {
-
-    //console.log("testing!")
-    let newRow = document.createElement('tr');
-
-    if(ctr % 2 === 0){
-        newRow.className = "mid";
-    }
+add1Button.addEventListener('click', () => {
     
-    console.log(nameInput.value)
-    newRow.innerHTML = 
-        `<td>${nameInput.value}</td>
-         <td>30</td>
-         <td>Maryland</td>`
+    let newTd = document.createElement('td');
+   
+    newTd.innerHTML = `&#9733`
+    tableRow.appendChild(newTd)
+         
+        
+    if (ctr >= 5){tableRow.deleteCell(dataCell)}
+    if (ctr >= 5) { return }
+        
+    ctr++
+    counter.innerHTML = ctr
+        
 
-    table.appendChild(newRow);
+})
 
-    ctr++;
+
+remove1Button.addEventListener('click', () => {
     
+    tableRow.deleteCell(dataCell)
+    
+    if (ctr === 0){ return 0 }
+    
+    ctr--
+    counter.innerHTML = ctr
 })

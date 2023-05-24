@@ -70,21 +70,54 @@ body{
 }
 
 td{
-    padding-left: 10px;
+    padding-left: 15px;
+    
     
     
 }
+
+
 
    
-.remove1{
+#remove1{
 
-
-}
-
-.add1{
+    font-size: xx-small;
+    text-align: left;
+    margin-left: 10%;
+    background-color: crimson;
+    font-weight: bolder;
+    border-color: seagreen;
+   
+    
+  
 
     
+
+    
+
+
 }
+
+#add1{
+
+   
+   font-size: xx-small;
+   margin-left: 26%;
+   background-color: lightseagreen;
+   font-weight: bolder;
+   border-color: seagreen;
+   
+  
+
+}
+
+#paragraph{
+    text-align: center;
+    margin-top: -10%;
+   font-weight: bolder;
+   margin-left: 8%;
+}
+
 
 
 
